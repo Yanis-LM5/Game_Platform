@@ -1,8 +1,10 @@
 package GamePlatformY5;
 
+import java.time.LocalDate;
+
 public class Support {
     protected String name;
-    protected String year; // release year
+    protected LocalDate relDate; // release year yyyy-MM-dd
     protected String creator; //ex: Sega, Sony...
     protected int sales; // Worldwide Sales
     protected int test_critics;
