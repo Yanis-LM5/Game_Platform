@@ -6,16 +6,38 @@ import java.util.Map;
 
 public class GameTest {
 
+/**
+ * Represents a structured test written by a Tester for a game on a specific support.
+ * At most one GameTest can exist per tester per support.
+ */
+public class GameTest {
+
+    /** The tester who wrote this test */
     private Tester tester;
+
+    /** The platform/support this test was done on */
     private Support support;
+
+    /** The game being tested */
     private Game testedGame;
 
+    /** Date the test was published */
     private LocalDate dateTest;
+
+    /** Full text of the test */
     private String testTxt;
+
+    /** Game build/version number tested */
     private String gameVersion;
     private Map<String, Float> gradePerCategory; // interface, gameplay, optimisation...
 
+    /** Scores per category (e.g. "gameplay" -> 8.5, "interface" -> 7.0) */
+    private Map<String, Float> gradePerCategory;
+
+    /** Optional: list of positive points */
     private List<String> pros;
+
+    /** Optional: list of negative points */
     private List<String> cons;
     private String testConditions; // set up (Ram ?, SSD?,...)
     private List<Game> similarGame;
@@ -62,9 +84,7 @@ public class GameTest {
         return dateTest;
     }
 
-    public void setDateTest(LocalDate dateTest) {
-        this.dateTest = dateTest;
-    }
+    // --- Getters and Setters ---
 
     public String getTestTxt() {
         return testTxt;
@@ -131,4 +151,6 @@ public class GameTest {
     }
 }
 
+    /** @param dateTest new publication date */
+    public void setDateTest(LocalDate dateTest) { this.dateTest = dateTest; }
 
