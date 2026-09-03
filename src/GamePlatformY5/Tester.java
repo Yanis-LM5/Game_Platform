@@ -6,6 +6,8 @@ public class Tester {
     private String username;
     private String firstName;
     private String lastName;
+    private String password;
+
 
     private void setId(){
         id = nbTesters;
@@ -24,5 +26,5 @@ public class Tester {
     private void reportRating(){
 
     }
-    
+
 }
